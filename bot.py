@@ -112,6 +112,7 @@ def admin_menu():
 
 @dp.message(Command("start"))
 async def handle_start(message: Message):
+    add_user(message.from_user)
     await message.answer("👋 Mening shaxsiy botimga xush kelibsiz!", reply_markup=reply_main_menu())
 
 @dp.message(Command("about"))
